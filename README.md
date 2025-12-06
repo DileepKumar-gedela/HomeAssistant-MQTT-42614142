@@ -37,7 +37,7 @@ Python Script → MQTT Broker → Home Assistant Sensors → Dashboard
 ![Dashboard](screenshots/MQTT_Publish.png)
 
 ### 2️⃣ Python MQTT Publish Output
-![Terminal Output](screenshots/terminal publish output.png)
+![Terminal Output](screenshots/terminal_publish_output.png)
 
 Install the MQTT library using:
 
