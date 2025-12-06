@@ -1,0 +1,16 @@
+mqtt:
+  sensor:
+    - name: "GDK Temperature"
+      state_topic: "home/gedeladileep-2025/sensor"
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+
+    - name: "GDK Humidity"
+      state_topic: "home/gedeladileep-2025/sensor"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+
+    - name: "GDK Light Level"
+      state_topic: "home/gedeladileep-2025/sensor"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.light }}"
