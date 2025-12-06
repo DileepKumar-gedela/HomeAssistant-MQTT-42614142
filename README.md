@@ -29,8 +29,19 @@ Python Script → MQTT Broker → Home Assistant Sensors → Dashboard
 - Python 3.x installed
 - `paho-mqtt` library installed
 
+---
+
+ ## 📷 Screenshots
+
+### 1️⃣ Home Assistant Dashboard
+![Dashboard](screenshots/MQTT_Publish.png)
+
+### 2️⃣ Python MQTT Publish Output
+![Terminal Output](screenshots/terminal publish output.png)
+
 Install the MQTT library using:
 
 ```bash
 pip install paho-mqtt
+
 
