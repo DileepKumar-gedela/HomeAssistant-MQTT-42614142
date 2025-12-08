@@ -1,27 +1,23 @@
 import time
 import json
 import paho.mqtt.client as mqtt
-
-# ----- REQUIRED BY ASSIGNMENT -----
 student_name = "Gedela Dileep Kumar"
 unique_id = "42614142"
 topic = "home/gedeladileep-2025/sensor"
-# ----------------------------------
 
-# MQTT broker details (Home Assistant VM)
-broker_host = "192.168.1.12"   # IP of your Home Assistant VM
+broker_host = "192.168.1.12" 
 broker_port = 1883
-username = "dileep"            # MQTT username you created
-password = "nLT5VXtx6RpizQm"   # MQTT password you created
+username = "dileep"          
+password = "nLT5VXtx6RpizQm" 
 
 def get_sensor_values():
     """
     Fake sensor values.
     These are the values you are publishing to Home Assistant.
     """
-    temperature = 25           # as required
-    humidity = 60              # as required
-    light = 80                 # extra sensor (any other name is also okay)
+    temperature = 25          
+    humidity = 60       
+    light = 80  
 
     return {
         "student_name": student_name,
@@ -42,7 +38,7 @@ def main():
             json_payload = json.dumps(payload)
             print(f"Publishing to {topic}: {json_payload}")
             client.publish(topic, json_payload, qos=0, retain=True)
-            time.sleep(5)  # publish every 5 seconds
+            time.sleep(5)
     except KeyboardInterrupt:
         print("Stopped by user.")
     finally:
@@ -50,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
